@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "f82effc5-f1a4-4212-a2ec-4d4aaa675fa7",
+		"name": "Theatre API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27078568"
+	},
+	"item": [
+		{
+			"name": "All plays",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create play",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Yellow Moon\",\n    \"image\": \"https://teatromadrid.com/wp-content/uploads/2022/01/yellow-moon-400x572.jpeg\",\n    \"director\": \"Bea Jaén\",\n    \"theatre\": \"Quique San Francisco\",\n    \"opinion\": \"Me gustó mucho, sobre todo la música\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/plays",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"plays"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit play",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"opinion\": \"wow\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/plays/648f139de21e01a1ba88c78f",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"plays",
+						"648f139de21e01a1ba88c78f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete play",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
